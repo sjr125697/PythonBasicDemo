@@ -1,14 +1,15 @@
-
-n=int("3")
-a="1 2 3 4 5 6 7 8 9"
-b="2 3 4 5 6 7 8 9 1"
-a=a.split()
-b=b.split()
-for i in range(n):
-    for j in range(n):
-        sum=int(a[3*i+j])+int(b[3*i+j])
-        if 10<=sum<=99:
-            print("_" + str(sum),end=' ')
-        elif 0<=sum<=9:
-            print("__" + str(sum),end=' ')
-    print()
+s=int(input())
+a=input().split()
+b=input().split()
+l=len(a)
+a=[int(x) for x in a]
+b=[int(x) for x in b]
+c=[]
+k=0
+for i in range(l):
+    c.append(a[i]+b[i])
+for i in range(s):
+    for j in range(s):
+        print("{:2d}".format(c[k]),end=" ")
+        k+=1
+    print("")
